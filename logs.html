@@ -1,0 +1,10 @@
+<div id="log"></div>
+
+<script>
+    const logDiv = document.getElementById('log')
+    logDiv.innerHTML = ''
+    require('electron').ipcRenderer.on('ping', (event, message) => {
+        logDiv.innerHTML = `${message}<br/>` + logDiv.innerHTML
+        //window.scrollTo(0,logDiv.scrollHeight);
+    })
+</script>

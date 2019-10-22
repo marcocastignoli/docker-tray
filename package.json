@@ -1,0 +1,25 @@
+{
+  "name": "docker-tray",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^6.0.12",
+    "electron-builder": "^21.2.0"
+  },
+  "build": {
+    "appId": "marcocastignoli.dockertray",
+    "extraFiles": [
+      {
+        "from": "resources",
+        "to": "resources",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ]
+  },
+  "dependencies": {
+    "node-docker-api": "^1.1.22"
+  }
+}
