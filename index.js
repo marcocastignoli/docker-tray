@@ -68,7 +68,12 @@ function refresh() {
     .catch(error => console.log(error));
 }
 
-const imgPath = path.join(process.resourcesPath, 'logo.png')
+let imgPath
+if (!process.env.APP_DEV) {
+  imgPath = path.join(process.resourcesPath, 'logo.png')
+} else {
+  imgPath = __dirname + '/resources/logo.png'
+}
 
 app.on('ready', () => {
   appIcon = new Tray(imgPath)

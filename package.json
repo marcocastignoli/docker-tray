@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "build": "electron-builder .",
+    "start": "APP_DEV=true electron ."
+  },
   "devDependencies": {
     "electron": "^6.0.12",
     "electron-builder": "^21.2.0"
