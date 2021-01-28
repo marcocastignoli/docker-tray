@@ -8,7 +8,7 @@
     "start": "APP_DEV=true electron ."
   },
   "devDependencies": {
-    "electron": "^6.0.12",
+    "electron": "^9.4.0",
     "electron-builder": "^21.2.0"
   },
   "build": {
